@@ -1,0 +1,8 @@
+2023-03-14 16:39:58,796 - ERROR - crypto_app.caesarcipher_algo - Error during the encryption of a message with the Caesar cipher. The key must be an int
+2023-03-14 16:39:58,796 - ERROR - crypto_app.caesarcipher_algo - Error during the decryption of a message with the Caesar cipher. The message must be a string
+2023-03-14 16:40:18,729 - ERROR - crypto_app.caesarcipher_algo - Error during the encryption of a message with the Caesar cipher. The key must be an int
+2023-03-14 16:40:18,729 - ERROR - crypto_app.caesarcipher_algo - Error during the decryption of a message with the Caesar cipher. The message must be a string
+2023-03-14 16:41:57,439 - ERROR - crypto_app.caesarcipher_algo - Error during the encryption of a message with the Caesar cipher. The key must be an int
+2023-03-14 16:41:57,439 - ERROR - crypto_app.caesarcipher_algo - Error during the decryption of a message with the Caesar cipher. The message must be a string
+2023-03-14 16:42:10,978 - ERROR - crypto_app.caesarcipher_algo - Error during the encryption of a message with the Caesar cipher. The key must be an int
+2023-03-14 16:42:10,978 - ERROR - crypto_app.caesarcipher_algo - Error during the decryption of a message with the Caesar cipher. The message must be a string

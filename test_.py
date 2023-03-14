@@ -17,9 +17,12 @@ la commande pytest <nom de ce script>
 from crypto_app.aes_algo import AdvancedEncryptionStandard
 from crypto_app.enigmam3_algo import EnigmaM3
 from crypto_app.blowfish_algo import Blowfish
+from crypto_app.caesarcipher_algo import CaesarCipher
+from crypto_app.vigenerecipher_algo import VigenereCipher
+from crypto_app.rsa_algo import RSAAlgo
+from crypto_app.des_algo import DES
 
-
-
+from crypto_app.des_algo import DES
 
 def test_enigma():
     """
@@ -76,3 +79,47 @@ def test_blowfish():
     encrypted = blfish.encrypt(msg, key)
     decrypted = blfish.decrypt(encrypted, key)
     assert decrypted == msg
+
+
+
+def test_caesar():
+    """
+    Un exemple de fonction de test, ici avec le cryptage
+    blowfish.
+    """
+
+    caesar = CaesarCipher()
+    msg = "ceci est le test de caesar"
+    key = 3
+
+    encrypted = caesar.encrypt(msg, key)
+    decrypted = caesar.decrypt(encrypted, key)
+    assert decrypted == msg
+
+def test_vigenere():
+    """
+    Un exemple de fonction de test, ici avec le cryptage
+    blowfish.
+    """
+
+    vigenere = VigenereCipher()
+    msg = "ceci est le test de vigenere"
+    key = "clevigenere"
+
+    encrypted = vigenere.encrypt(msg, key)
+    decrypted = vigenere.decrypt(encrypted, key)
+    assert decrypted == msg
+
+
+
+def test_des():
+    des = DES()
+
+    key = "mysecret"
+    message = "This is a secret message"
+    crypt = "fcedd1515146aab639575b874c72dc006b2142c540562601f5f26349eefb43d9"
+
+    crypted = des.encrypt(message, key)
+    assert crypted == "fcedd1515146aab639575b874c72dc006b2142c540562601f5f26349eefb43d9"
+    decrypted = des.decrypt(crypt, key)
+    assert decrypted == "This is a secret message"
