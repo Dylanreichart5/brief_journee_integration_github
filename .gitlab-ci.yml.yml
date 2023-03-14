@@ -1,0 +1,13 @@
+stages:          # List of stages for jobs, and their order of execution
+  - test
+
+
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test 
+  image: python:3.9
+  before_script:
+    - pip install -r requirements.txt   # It only starts when the job in the build stage completes successfully.
+  script:
+    - pytest -v
+
